@@ -1,10 +1,11 @@
 #pragma once
 
 #include "zad1.hpp"
+#include string
 
 #include <cctype>
 
-/using namespace std;
+using namespace std;
 // tutaj klasa Artysta
 class Artysta
 {
@@ -27,37 +28,36 @@ public:
     }
 };
 
-class PopGwiazda : public Artysta {
-private:
+class PopGwiazda : public Artysta
+{
     string pseudonim;
     unsigned sluchacze;
 public:
     PopGwiazda() {};
-    PopGwiazda(std::string& str, unsigned& P) : pseudonim(str),sluchacze(P) {};
-    ~PopGwiazda() {};
-
-    void graj(std::ostream& a) const {
-        a << "PopGwiazda" << ": " << this->sluchacze;
+    PopGwiazda(const std::string& a, unsigned b) : pseudonim(a), sluchacze(b) {  };
+    void graj(std::ostream& a) const
+    {
+        a << "PopGwiazda: " << this->pseudonim;
     }
 };
 
-class RapGwiazda : public Artysta {
-private:
+class RapGwiazda : public Artysta
+{
     string pseudonim;
     unsigned sluchacze;
 public:
     RapGwiazda() {};
-    RapGwiazda(std::string& str, unsigned& P) : pseudonim(str),sluchacze(P) {};
-    ~RapGwiazda() {};
+    RapGwiazda(const std::string& a, unsigned b) : pseudonim(a), sluchacze(b) {};
 
-    void graj(std::ostream& a) const {
-        a << "RapGwiazda" << ": " << this->sluchacze;
+    void graj(std::ostream& a) const
+    {
+        a << "RapGwiazda: " << this->pseudonim;
     }
 };
 
-Artysta* stworzArtyste(std::string str) {
-    if (str.front() = std::toupper(str.front()))
+Artysta* stworzArtyste(const std::string& str) {
+    if (str.front() == std::toupper(str.front())) 
         return new PopGwiazda("BTS", 1234);
     else
         return new RapGwiazda("Ye", 4321);
-};
+}
