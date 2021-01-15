@@ -10,7 +10,7 @@ private:
     Artysta a;
     T i;
 public:
-    ArtystaPlusInstrument(const Artysta& aa, const T& ii) : a(aa), i(ii) {}
+    ArtystaPlusInstrument(const Artysta& _a, const T& _i) : a(_a), i(_i) {}
     unsigned koncert(){
       return i.liczbaUczestnikow(a);
       }
