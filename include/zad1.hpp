@@ -10,7 +10,7 @@
 // tutaj klasa Artysta
 class Artysta {
 public:
-    Artysta() { this->pseudonim = "Anonim"; }
+    Artysta() { this->pseudonim = "Anonim"; this->sluchacze=0;}
     Artysta(const string& str, unsigned P) : pseudonim(str), sluchacze(P) {};
     ~Artysta() {};
 
