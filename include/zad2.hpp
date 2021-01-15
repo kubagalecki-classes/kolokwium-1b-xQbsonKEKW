@@ -1,8 +1,6 @@
 #pragma once
 
-//#include "zad1.hpp"
-#include <iostream>
-#include <string>
+#include "zad1.hpp"
 
 #include <cctype>
 
