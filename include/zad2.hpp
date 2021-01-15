@@ -10,36 +10,30 @@ using namespace std;
 
 class PopGwiazda : public Artysta
 {
-private:
-    string pseudonim;
-    unsigned sluchacze;
 public:
     PopGwiazda() {};
-    PopGwiazda(const std::string& a, unsigned b) : pseudonim(a), sluchacze(b) {  };
-    void graj(std::ostream& a) const
+    PopGwiazda(const std::string& a, unsigned b) : Artysta(a,b) {  };
+    void graj(std::ostream& a) const override
     {
-        a << "PopGwiazda: " << this->pseudonim;
+        a << "PopGwiazda: " << getPseudonim();
     }
 };
 
 class RapGwiazda : public Artysta
 {
-private:
-    string pseudonim;
-    unsigned sluchacze;
 public:
     RapGwiazda() {};
-    RapGwiazda(const std::string& a, unsigned b) : pseudonim(a), sluchacze(b) {};
+    RapGwiazda(const std::string& a, unsigned b) : Artysta(a,b) {};
 
-    void graj(std::ostream& a) const
+    void graj(std::ostream& a) const override
     {
-        a << "RapGwiazda: " << this->pseudonim;
+        a << "RapGwiazda: " << getPseudonim();
     }
 };
 
 Artysta* stworzArtyste(const std::string& str) {
     if (str.front() == std::toupper(str.front())) 
         return new PopGwiazda("BTS", 1234);
-    else if (str.front() != std::toupper(str.front())) 
+    else
         return new RapGwiazda("Ye", 4321);
 }
