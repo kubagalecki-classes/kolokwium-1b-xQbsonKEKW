@@ -33,7 +33,7 @@ private:
     unsigned sluchacze;
 public:
     PopGwiazda() {};
-    PopGwiazda(std::string& str, unsigned& P) {};
+    PopGwiazda(std::string& str, unsigned& P) : pseudonim(str),sluchacze(P) {};
     ~PopGwiazda() {};
 
     void graj(std::ostream& a) const {
@@ -47,7 +47,7 @@ private:
     unsigned sluchacze;
 public:
     RapGwiazda() {};
-    RapGwiazda(std::string& str, unsigned& P) {};
+    RapGwiazda(std::string& str, unsigned& P) : pseudonim(str),sluchacze(P) {};
     ~RapGwiazda() {};
 
     void graj(std::ostream& a) const {
