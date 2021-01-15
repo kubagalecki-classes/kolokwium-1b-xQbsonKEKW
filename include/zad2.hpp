@@ -1,6 +1,6 @@
 #pragma once
 
-#include "zad1.hpp"
+//#include "zad1.hpp"
 #include string
 
 #include <cctype>
@@ -58,6 +58,6 @@ public:
 Artysta* stworzArtyste(const std::string& str) {
     if (str.front() == std::toupper(str.front())) 
         return new PopGwiazda("BTS", 1234);
-    else
+    else if (str.front() != std::toupper(str.front())) 
         return new RapGwiazda("Ye", 4321);
 }
