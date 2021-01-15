@@ -6,10 +6,11 @@
 
 template <class T>
 class ArystaPlusInstrument {
+private:    
     Artysta a;
     T i;
 public:
-    ArystaPlusInstrument(const Artysta& ar, const T& tt) : a{r} , i{tt} {};
+    ArystaPlusInstrument(const Artysta& ar, const T& tt) : a{ar} , i{tt} {}
     usigned koncert() {
         return i.liczbaUczestnikow(a);
     }
