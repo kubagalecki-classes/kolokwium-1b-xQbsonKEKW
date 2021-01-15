@@ -15,7 +15,7 @@ public:
     ~Artysta() {};
 
     void graj(ostream& os) const {
-        os << this->pseudonim << " : " << this->sluchacze;
+        os << this->pseudonim << ": " << this->sluchacze;
     }
     const string& getPseudonim() const { return this->pseudonim; }
     unsigned getSluchacze() const { return this->sluchacze; }
