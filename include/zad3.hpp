@@ -3,7 +3,6 @@
 #include "zad1.hpp"
 
 //tutaj szablon ArtystaPlusInstrument
-using namespace std;
 
 template <class T>
 class ArystaPlusInstrument {
@@ -11,8 +10,8 @@ class ArystaPlusInstrument {
     T i;
 public:
     ArystaPlusInstrument() {};
-    ArystaPlusInstrument(const Artysta& ar, const T& tt) : this->a(ar), this->i(tt) {};
+    ArystaPlusInstrument(const Artysta& ar, const T& tt) : a{r} , i{tt} {};
     usigned koncert() {
-        return this->i.liczbaUczestnikow(this->a);
+        return i.liczbaUczestnikow(a);
     }
 };
