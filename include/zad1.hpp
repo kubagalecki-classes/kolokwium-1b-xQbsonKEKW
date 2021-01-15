@@ -20,10 +20,10 @@ public:
     }
     const std::string& getPseudonim() const
     {
-        return this->pseudo;
+        return this->pseudonim;
     }
     unsigned getSluchacze() const
     {
-        return this->sluch;
+        return this->sluchacze;
     }
 };
