@@ -6,21 +6,24 @@
 #include <sstream>
 #include <string>
 
-#using namescapes std
+using namespace std;
 // tutaj klasa Artysta
-class Artysta {
-public:
-    Artysta() { this->pseudonim = "Anonim"; this->sluchacze=0;}
-    Artysta(const string& str, unsigned P) : pseudonim(str), sluchacze(P) {};
-    ~Artysta() {};
-
-    void graj(ostream& os) const {
-        os << this->pseudonim << ": " << this->sluchacze;
-    }
-    const string& getPseudonim() const { return this->pseudonim; }
-    unsigned getSluchacze() const { return this->sluchacze; }
-private:
-    std::string pseudonim;
+class Artysta 
+{
+    string pseudonim;
     unsigned sluchacze;
-
+public:
+    Artysta() { this->pseudonim = "Anonim"; this->sluchacze = 0; }
+    Artysta(const std::string& a, unsigned b) : pseudonim(a), sluchacze(b) {}
+    void graj(std::ostream& a) const {
+        a << this->pseudonim << ": " << this->sluchacze;
+    }
+    const std::string& getPseudonim() const
+    {
+        return this->pseudo;
+    }
+    unsigned getSluchacze() const
+    {
+        return this->sluch;
+    }
 };
