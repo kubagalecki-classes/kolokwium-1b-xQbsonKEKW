@@ -6,6 +6,7 @@
 #include <sstream>
 #include <string>
 
+#using namescapes std
 // tutaj klasa Artysta
 class Artysta {
 public:
