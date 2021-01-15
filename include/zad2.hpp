@@ -1,7 +1,8 @@
 #pragma once
 
 //#include "zad1.hpp"
-#include string
+#include <iostream>
+#include <string>
 
 #include <cctype>
 
@@ -9,6 +10,7 @@ using namespace std;
 // tutaj klasa Artysta
 class Artysta
 {
+private:
     string pseudonim;
     unsigned sluchacze;
 public:
@@ -30,6 +32,7 @@ public:
 
 class PopGwiazda : public Artysta
 {
+private:
     string pseudonim;
     unsigned sluchacze;
 public:
@@ -43,6 +46,7 @@ public:
 
 class RapGwiazda : public Artysta
 {
+private:
     string pseudonim;
     unsigned sluchacze;
 public:
